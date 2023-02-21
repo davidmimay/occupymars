@@ -1,0 +1,23 @@
+<mat-card>
+  
+  <mat-card-content *ngIf="youtubeItems?.length > 0; else loading">
+    <mat-card-title>Subscribed</mat-card-title>
+    <div *ngFor="let item of youtubeItems">
+      <h2>{{item.snippet.title}}</h2>
+      <img [src]="item.snippet.thumbnails.default.url">
+      <h3>{{item.snippet.description}}</h3>
+    </div>
+  </mat-card-content>
+
+  <ng-template #loading>
+    <mat-card-title>Subscribe</mat-card-title>
+    <mat-card-subtitle>To see more content</mat-card-subtitle>
+    <mat-card-actions align="end">
+      <a mat-raised-button href="http://www.youtube.com/channel/{{youtubeId}}?sub_confirmation=1" target="_blank">Subscribe</a>
+      <button mat-raised-button color="accent" (click)="getYoutuber()"><mat-icon>key</mat-icon>Unlock</button>  
+      <!-- <a mat-raised-button href="https://myaccount.google.com/permissions" target="_blank">Revoke</a> -->
+    </mat-card-actions>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </ng-template>
+
+</mat-card>

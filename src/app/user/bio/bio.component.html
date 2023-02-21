@@ -1,0 +1,23 @@
+<mat-card class="form">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Bio</mat-label>
+    <textarea matInput class="form-control" rows=6 placeholder="Tell us something about yourself..." [(ngModel)]="user.bio"></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Link<small><i>(share your social media account)</i></small></mat-label>
+    <input matInput class="form-control" placeholder="https://twitter.com/yourname" [(ngModel)]="user.link">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Your Hobbies<small><i>(comma separate each hobby)</i></small></mat-label>
+    <textarea matInput class="form-control" placeholder="Reading, Travelling, Gaming" [(ngModel)]="user.tags"></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button (click)="update()">
+    <mat-icon>save</mat-icon> 
+    <div role="alert" *ngIf="message">{{message}}</div>
+  </button>
+    
+</mat-card>

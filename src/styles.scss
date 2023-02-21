@@ -1,0 +1,28 @@
+html, body { 
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: DM Sans;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+header {
+  padding: 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+section {
+  padding: 1em;
+}
+.center {
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+.avatar {
+  width: 100px;
+  border-radius: 40%;
+  margin: 0 10px 5px;
+  }

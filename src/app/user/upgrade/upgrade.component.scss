@@ -1,0 +1,16 @@
+.grid {
+  margin: 1rem auto;
+  align-items: start;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  .grid-item-anim {
+    transition: transform 500ms ease;
+    &:hover {
+    transform: translateY(-3px);
+    }
+  }
+}
+mat-card {
+  max-width: 400px;
+}

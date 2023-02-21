@@ -1,0 +1,38 @@
+<h1>CATALOGUE</h1>
+<div class="center">
+  <mat-button-toggle-group #currency="matButtonToggleGroup" value="usd">
+    <mat-button-toggle value="usd">USD</mat-button-toggle>
+    <mat-button-toggle value="eur">EUR</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+
+<h1>PRICES</h1>
+<div class="grid">
+  <ng-container *ngFor="let item of products">
+
+    <mat-card *ngIf="item.currency == currency.value">
+      <img mat-card-image [src]="item.image">
+
+      <mat-card-header>
+        <mat-card-title>{{item.name}}</mat-card-title>
+        <mat-card-subtitle>{{item.description}}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <mat-chip-listbox>
+          <mat-chip *ngFor="let meta of item.metadata | keyvalue">{{meta.key}}: {{meta.value}}</mat-chip>
+        </mat-chip-listbox>
+      </mat-card-content>
+
+      <mat-card-actions align="end">
+        <a mat-raised-button color="accent" (click)="checkout(item.priceId)">{{ item.price }} {{item.currency | uppercase}} {{item.interval}}</a>
+        <a mat-stroked-button [routerLink]="item.priceId">Learn more {{item.producId}}</a>
+        <button mat-stroked-button (click)="openDialog(item.priceId, item.name, item.description, item.photo)">Preview</button>
+      </mat-card-actions>
+      <mat-card-footer>
+        <mat-progress-bar *ngIf="isloading" mode="indeterminate"></mat-progress-bar>
+      </mat-card-footer>
+    </mat-card>
+
+  </ng-container>
+</div>

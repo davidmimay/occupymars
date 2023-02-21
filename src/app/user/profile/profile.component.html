@@ -1,0 +1,15 @@
+<mat-card class="center">
+  <img class="avatar" [src]="customer.photoURL" />
+  <mat-card-title>{{ customer.displayName }}</mat-card-title>
+  <mat-card-subtitle>{{ customer.bio }}</mat-card-subtitle>
+  <mat-card-content>
+    <mat-chip-listbox>
+      <mat-chip *ngFor="let tag of customer.tags.split(',')">{{ tag }}</mat-chip>
+    </mat-chip-listbox>
+  </mat-card-content>
+
+  <mat-form-field>
+    <input matInput value={{customer.link}}>
+    <a matSuffix mat-icon-button href={{customer.link}} target="_blank"><mat-icon>arrow_forward</mat-icon></a>
+  </mat-form-field>
+</mat-card>

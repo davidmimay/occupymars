@@ -1,0 +1,20 @@
+.google {
+  border-top: 5px solid #EA4335;
+  border-right: 5px solid #4285F4;
+  border-bottom: 5px solid #34A853;
+  border-left: 5px solid #FBBC05;
+}
+
+button {
+  img {
+      width: 1.25em;
+  }
+}
+
+:host {
+  text-align: center;
+}
+
+.logout {
+  padding-top: 5em;
+}

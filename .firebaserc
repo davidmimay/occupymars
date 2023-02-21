@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mimay1": {
+      "hosting": {
+        "angulartemplate": [
+          "nooglerway"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "nooglerway"
+  }
+}

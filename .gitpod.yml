@@ -1,0 +1,15 @@
+tasks:
+  - name: START 
+    before: |
+      echo "✅ BEFORE | PREBUILT & WORKSPACE: Define node version, install angular and firebase"
+      nvm install 16
+      nvm alias default 16
+      npx @angular/cli analytics off
+      npm install -g @angular/cli
+      npm install -g firebase-tools
+    init: |
+      echo "✅ INIT | PREBUILT: Installing dependencies…"
+      npm install
+    command: |
+      echo "✅ COMMAND | WORKSPACE: Serve project"
+      npm start

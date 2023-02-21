@@ -1,0 +1,33 @@
+<div *ngIf="!(user | async)">
+  <h1>Login</h1>
+  <button class="google" mat-raised-button appSignin>Login with Google</button>
+</div>
+
+<div *ngIf="user | async as user" class="logout">
+  <img class="avatar" [src]="user.photoURL">
+  <div class="mat-h1">Hello 👋 <strong>{{ user.displayName }}</strong></div>
+  <div class="mat-h3">Logged in as <strong>{{ user.email }}</strong></div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Shareable link</mat-label>
+    <input matInput value="{{url}}/{{user.uid}}">
+    <button matSuffix mat-icon-button (click)="alertCopy()" cdkCopyToClipboard="{{url}}/{{user.uid}}"><mat-icon>content_copy</mat-icon></button>
+  </mat-form-field>
+
+  <div>
+    <button mat-stroked-button routerLink="/{{user.uid}}"><mat-icon>reply</mat-icon>View profile</button>
+    <button mat-stroked-button (click)="auth.signOut()">Logout</button>
+  </div>
+  
+  <mat-tab-group dynamicHeight mat-align-tabs="center" color="accent" [selectedIndex]="1">
+    <mat-tab label="✨ Upgrade">
+      <app-upgrade></app-upgrade> 
+    </mat-tab>
+    <mat-tab label="Bio">
+      <app-bio></app-bio>   
+    </mat-tab>
+    <mat-tab label="Susbcribe">
+      <app-subscribe></app-subscribe>
+    </mat-tab>
+  </mat-tab-group>
+</div>
