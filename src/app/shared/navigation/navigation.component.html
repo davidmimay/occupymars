@@ -19,33 +19,7 @@
       <a mat-list-item routerLink="/store" (click)="drawer.close()">Store</a>
       <a mat-list-item routerLink="/youtube" (click)="drawer.close()">Youtube</a>
       <mat-divider></mat-divider>
-      <a mat-list-item routerLink="/ethtomars" (click)="drawer.close()">
-        <div matListItemTitle>👾 eth>to_mars</div>
-        <div matListItemLine>Blockchain</div>
-      </a>
-      <a mat-list-item routerLink="/ethtomars" (click)="drawer.close()">
-        <div matListItemTitle>🔋 caelux</div>
-        <div matListItemLine>Clean energy</div>
-      </a>
-      <a mat-list-item routerLink="/ethtomars" (click)="drawer.close()">
-        <div matListItemTitle>🚙 lamboXPROJECT</div>
-        <div matListItemLine>Electric cars</div>
-      </a>
-      <a mat-list-item routerLink="/ethtomars" (click)="drawer.close()">
-        <div matListItemTitle>😌 nentei</div>
-        <div matListItemLine>Mindfulness</div>
-      </a>
-      <a mat-list-item routerLink="/ethtomars" (click)="drawer.close()">
-        <div matListItemTitle>🌱 malamakai</div>
-        <div matListItemLine>Hydroponics</div>
-      </a>
-      <a mat-list-item routerLink="/ethtomars" (click)="drawer.close()">
-        <div matListItemTitle>🏠 xtorie</div>
-        <div matListItemLine>Modular homes</div>
-      </a>
-
       <!-- <a mat-list-item href="#app-action">Join</a> -->
-
       <ng-container *ngFor="let page of pages">
         <a mat-list-item routerLink="blog/page/{{page.id}}" (click)="drawer.close()">{{page.title}}</a>
       </ng-container>

@@ -9,8 +9,6 @@ const routes: Routes = [
   { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule), canActivate: [AuthGuard] },
   { path: 'store', loadChildren: () => import('./store/store.module').then(m => m.StoreModule) },
   { path: 'youtube', loadChildren: () => import('./youtube/youtube.module').then(m => m.YoutubeModule) },
-  // Projects
-  { path: 'ethtomars', loadChildren: () => import('./ethtomars/ethtomars.module').then(m => m.EthtomarsModule) },
   // Stripe
   { path: 'support', component: PaymentComponent },
   { path: 'privacy', component: PaymentComponent },

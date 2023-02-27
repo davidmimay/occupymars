@@ -14,20 +14,20 @@ import { getAuth } from "firebase/auth";
 export class ProfileComponent implements OnInit {
 
   customerId: any;
-  // customer: Observable<any>;
   customer: any;
   cust: any;
   customers = null;
-
+  
   constructor(
     private route: ActivatedRoute,
     private firestore: Firestore,
     private seo: SeoService,
     // public data: CustomerDataService
   ) {
-    this.customerId = this.route.snapshot.paramMap.get('id');
+    // this.customerId = this.route.snapshot.paramMap.get('id');
   }
 
+  
   // getCustomer(id: string) {
   //   if (this.customers) {
   //     const cached = this.customers.find(v => v.id === id);
@@ -40,30 +40,21 @@ export class ProfileComponent implements OnInit {
 
   // }
 
-  ngOnInit() {
+  ngOnInit(): void {  
     this.customerId = this.route.snapshot.paramMap.get('id');
-
-    // this.customer = this.firestore
-    //   .collection('customers')
-    //   .doc<any>(customerId)
-    //   .valueChanges()
-    // this.customer = this.data.getCustomer(this.customerId)
-    //   .pipe(
-    //     tap(cust =>
-    //       this.seo.generateTags({
-    //         title: cust.displayName,
-    //         description: cust.bio,
-    //         image: cust.photoURL,
-    //       })
-    //     )
-    //   );
-
     const unsub = onSnapshot(doc(this.firestore, 'customers', this.customerId), (doc) => {
-      const source = doc.metadata.hasPendingWrites ? "Local" : "Server";
-      console.log(source, " data: ", doc.data());
-      this.customer = doc.data(); 
+      // const source = doc.metadata.hasPendingWrites ? "Local" : "Server";
+      // console.log(source, " data: ", doc.data());
+      this.customer = doc.data();
+      // this.customer.pipe(
+      //   tap(cust =>
+      //     this.seo.generateTags({
+      //       title: cust.displayName,
+      //       description: cust.bio,
+      //       image: cust.photoURL,
+      //     })
+      //   )
+      // );
     });
-    unsub();
   }
-
 }

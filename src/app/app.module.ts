@@ -27,7 +27,6 @@ import { BlogModule } from './blog/blog.module';
 import { StoreModule } from './store/store.module';
 import { HomeModule } from './home/home.module';
 import { YoutubeModule } from './youtube/youtube.module';
-import { EthtomarsModule } from './ethtomars/ethtomars.module';
 
 @NgModule({
   declarations: [
@@ -56,7 +55,6 @@ import { EthtomarsModule } from './ethtomars/ethtomars.module';
     StoreModule,
     HomeModule,
     YoutubeModule,
-    EthtomarsModule,
   ],
   providers: [
     ScreenTrackingService,

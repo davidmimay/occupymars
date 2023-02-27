@@ -1,14 +1,13 @@
 export const environment = {
   firebase: {
-    apiKey: "AIzaSyDherIKIIiOpM5MkIF_T_EQBWFy9BHhbS4",
-    authDomain: "mimay1.firebaseapp.com",
-    databaseURL: "https://mimay1.firebaseio.com",
-    projectId: "mimay1",
-    storageBucket: "mimay1.appspot.com",
-    messagingSenderId: "528823231751",
-    appId: "1:528823231751:web:5e12e4f488304894f8d1a2",
-    measurementId: "G-2CVBNV4BDL",
-    locationId: 'europe-west2',
+    apiKey: 'AIzaSyAjyWmiqzS95rUDhR9ZaaFN5BSAZGIWgWU',
+    authDomain: 'occupymars.firebaseapp.com',
+    projectId: 'occupymars',
+    storageBucket: 'occupymars.appspot.com',
+    messagingSenderId: '831764107569',
+    appId: '1:831764107569:web:b073afc5c247840e932010',
+    measurementId: 'G-EFK65VXPGW',
+    locationId: 'us-west2',
   },
   google: {
     bloggerId: '6664790489593253867',
