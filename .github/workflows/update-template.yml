@@ -7,7 +7,7 @@
 #   - Push the branch to this repository
 #   - Create a pull request in this repository
 #
-name: Sync changes from template
+name: Update changes from template
 
 # TODO:
 # - Switch to gh. Check https://github.com/cli/cli/issues/297 for updates
@@ -20,24 +20,24 @@ on:
   # Run when this file changes
   # push:
     # paths:
-      # - .github/workflows/sync-from-template.yml
+      # - .github/workflows/update-template.yml
 
   # Run when manually triggered
   workflow_dispatch:
 
 env:
   BASE_BRANCH: main
-  HEAD_BRANCH: sync
+  HEAD_BRANCH: update
   GIT_AUTHOR_NAME: ${{ github.repository_owner }}
   GIT_AUTHOR_EMAIL: ${{ github.repository_owner }}@users.noreply.github.com
-  REPO_TEMPLATE: davidmimay/angulartemplate
+  REPO_TEMPLATE: davidmimay/nooglerway
   THIS_REPO: ${{ github.repository }}
 
 jobs:
-  sync-from-template:
+  update-template:
     # Do not run on the template repository itself
-    if: github.repository != 'davidmimay/angulartemplate'
-    name: Sync changes from davidmimay/angulartemplate
+    if: github.repository != 'davidmimay/nooglerway'
+    name: Update changes from davidmimay/nooglerway
     runs-on: ubuntu-latest
     continue-on-error: true
 
@@ -92,7 +92,7 @@ jobs:
             user.email "${GIT_AUTHOR_EMAIL}"
           git -C ${THIS_REPO} add .
           git -C ${THIS_REPO} commit \
-            -m "Sync from template@${{ github.sha }}"
+            -m "Update from template@${{ github.sha }}"
       # Push the branch to the target repository
       - name: Push topic branch
         run: git -C ${THIS_REPO} push -u origin "${HEAD_BRANCH}"
