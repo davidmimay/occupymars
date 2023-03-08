@@ -1,14 +1,14 @@
 {
-  "targets": {
+    "targets": {
     "mimay1": {
       "hosting": {
-        "nooglerway": [
-          "nooglerway"
+        "occupymars": [
+          "occupymars"
         ]
       }
     }
   },
   "projects": {
-    "default": "nooglerway"
+    "default": "occupymars"
   }
 }
