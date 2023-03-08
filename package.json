@@ -1,5 +1,5 @@
 {
-  "name": "occupymars",
+  "name": "webapp",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,10 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run occupymars:serve-ssr",
-    "serve:ssr": "node dist/occupymars/server/main.js",
-    "build:ssr": "ng build && ng run occupymars:server",
-    "prerender": "ng run occupymars:prerender"
+    "dev:ssr": "ng run webapp:serve-ssr",
+    "serve:ssr": "node dist/webapp/server/main.js",
+    "build:ssr": "ng build && ng run webapp:server",
+    "prerender": "ng run webapp:prerender"
   },
   "private": true,
   "dependencies": {

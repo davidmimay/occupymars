@@ -18,31 +18,6 @@
       <a mat-list-item routerLink="/blog/feed" (click)="drawer.close()">Blog</a>
       <a mat-list-item routerLink="/store" (click)="drawer.close()">Store</a>
       <a mat-list-item routerLink="/youtube" (click)="drawer.close()">Youtube</a>
-      <mat-divider></mat-divider>
-      <a mat-list-item routerLink="/ethtomars" (click)="drawer.close()">
-        <div matListItemTitle>👾 eth>to_mars</div>
-        <div matListItemLine>Blockchain</div>
-      </a>
-      <a mat-list-item routerLink="/caelux" (click)="drawer.close()">
-        <div matListItemTitle>🔋 caelux</div>
-        <div matListItemLine>Clean energy</div>
-      </a>
-      <a mat-list-item routerLink="/lamboxproject" (click)="drawer.close()">
-        <div matListItemTitle>🚙 lamboXPROJECT</div>
-        <div matListItemLine>Electric cars</div>
-      </a>
-      <a mat-list-item routerLink="/nentei" (click)="drawer.close()">
-        <div matListItemTitle>😌 nentei</div>
-        <div matListItemLine>Mindfulness</div>
-      </a>
-      <a mat-list-item routerLink="/malamakai" (click)="drawer.close()">
-        <div matListItemTitle>🌱 malamakai</div>
-        <div matListItemLine>Hydroponics</div>
-      </a>
-      <a mat-list-item routerLink="/xtorie" (click)="drawer.close()">
-        <div matListItemTitle>🏠 xtorie</div>
-        <div matListItemLine>Modular homes</div>
-      </a>
       <!-- <a mat-list-item href="#app-action">Join</a> -->
       <ng-container *ngFor="let page of pages">
         <a mat-list-item routerLink="blog/page/{{page.id}}" (click)="drawer.close()">{{page.title}}</a>
@@ -66,21 +41,6 @@
         <ng-container *ngFor="let page of pages">
           <a mat-button routerLink="blog/page/{{page.id}}">{{page.title}}</a>
         </ng-container>
-        
-        <button mat-button [matMenuTriggerFor]="apps">Apps</button>
-        <mat-menu #apps="matMenu">
-          <button mat-menu-item routerLink="/ethtomars">👾 eth>to_mars</button>
-          <button mat-menu-item routerLink="/caelux">🔋 caelux</button>
-          <button mat-menu-item routerLink="/malamakai">🌱 malamakai</button>
-          <button mat-menu-item routerLink="/xPROJECT">🚙 lamboXPROJECT</button>
-          <button mat-menu-item rrouterLink="/nentei">😌 nentei</button>
-          <button mat-menu-item routerLink="/xtorie">🏠 xtorie</button>
-        </mat-menu>
-
-        <!-- <a mat-button routerLink="/youtube">Youtube</a> -->
-        <!-- <a mat-button routerLink="/gifts">gifts</a> -->
-        <!-- <a mat-button href="https://malamakai.etsy.com/" target="_blank">✨ Shop</a> -->
-        
         <a mat-button routerLink="/user" *ngIf="!(user | async) as user">Login</a>
         <a mat-mini-fab routerLink="/user" *ngIf="(user | async) as user">
           <img class="avatar" [src]="user.photoURL || 'assets/user.svg'">

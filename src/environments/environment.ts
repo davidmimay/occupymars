@@ -1,9 +1,9 @@
 export const environment = {
   firebase: {
     apiKey: 'AIzaSyAjyWmiqzS95rUDhR9ZaaFN5BSAZGIWgWU',
-    authDomain: 'occupymars.firebaseapp.com',
-    projectId: 'occupymars',
-    storageBucket: 'occupymars.appspot.com',
+    authDomain: 'nooglerway.firebaseapp.com',
+    projectId: 'nooglerway',
+    storageBucket: 'nooglerway.appspot.com',
     messagingSenderId: '831764107569',
     appId: '1:831764107569:web:b073afc5c247840e932010',
     measurementId: 'G-EFK65VXPGW',

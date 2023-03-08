@@ -13,6 +13,7 @@ export class BloggerService {
   posts: any[] = [];
   private bloggerId: string = environment.google.bloggerId;
   private bloggerUrl: string = 'https://www.googleapis.com/blogger/v3';
+  private label: string = environment.firebase.projectId;
   private apikey: string = environment.firebase.apiKey; // 🔥 Enable Blogger API on GCP
 
   constructor(
@@ -52,10 +53,11 @@ export class BloggerService {
   }
 
   // 🟢 Get Posts from blogger using API.
-  // GET POST: https://www.googleapis.com/blogger/v3/blogs/2399953/posts?key=YOUR-API-KEY
+  // GET POST: https://www.googleapis.com/blogger/v3/blogs/2399953/posts?labels=yourlabel&key=YOUR-API-KEY
   getBloggerPosts() {
     let url = `${ this.bloggerUrl }/blogs/${this.bloggerId}/posts`;
     let params = new HttpParams();
+    params = params.append('labels', this.label);
     params = params.append('key', this.apikey);
 
     return this.http.get( url, { params } ).pipe( map( (res: any) => {
