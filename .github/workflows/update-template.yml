@@ -30,14 +30,14 @@ env:
   HEAD_BRANCH: update
   GIT_AUTHOR_NAME: ${{ github.repository_owner }}
   GIT_AUTHOR_EMAIL: ${{ github.repository_owner }}@users.noreply.github.com
-  REPO_TEMPLATE: davidmimay/nooglerway
+  REPO_TEMPLATE: davidmimay/occupymars
   THIS_REPO: ${{ github.repository }}
 
 jobs:
   update-template:
     # Do not run on the template repository itself
-    if: github.repository != 'davidmimay/nooglerway'
-    name: Update changes from davidmimay/nooglerway
+    if: github.repository != 'davidmimay/occupymars'
+    name: Update changes from davidmimay/occupymars
     runs-on: ubuntu-latest
     continue-on-error: true
 
