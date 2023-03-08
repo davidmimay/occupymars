@@ -11,6 +11,9 @@ import { UpgradeComponent } from './upgrade/upgrade.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { ProfileComponent } from './profile/profile.component';
 
+// Modules
+import { MalamakaiModule } from '../malamakai/malamakai.module';
+
 @NgModule({
   declarations: [
     BioComponent,
@@ -24,6 +27,7 @@ import { ProfileComponent } from './profile/profile.component';
     CommonModule,
     UserRoutingModule,
     SharedModule,
+    MalamakaiModule
   ]
 })
 export class UserModule { }

@@ -1,11 +1,11 @@
 <header>
   <!-- <img style="width: 50%" src="assets/MeditatingDoodle.svg"> -->
-  <div class="mat-display-2">Body parts</div>
-  <div class="mat-headline">– choose your workout target –</div>
+  <div class="mat-headline-3">Body parts</div>
+  <div class="mat-headline-5">– choose your workout target –</div>
 </header>
 
 <div class="grid" *ngIf="videos.length > 0">
-  <mat-card class="grid-anim" *ngFor="let item of videos" [routerLink]="item.resourceId.videoId">
+  <mat-card appearance="outlined" class="grid-anim" *ngFor="let item of videos" [routerLink]="item.resourceId.videoId">
     <mat-card-header>
       <div mat-card-avatar><mat-icon>fitness_center</mat-icon></div>
       <mat-card-title>{{item.title}}</mat-card-title>

@@ -1,7 +1,7 @@
 <h1 class="center">ALL POSTS</h1>
 
 <div class="post" *ngFor="let post of posts">
-  <mat-card>
+  <mat-card appearance="outlined">
     <mat-card-title class="mat-headline-2">{{post.title}}</mat-card-title>
     <mat-card-content [innerHTML]="post.content"></mat-card-content>
   </mat-card>

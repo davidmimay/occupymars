@@ -9,7 +9,7 @@
     
     <ng-container *ngFor="let item of products">
 
-      <mat-card *ngIf="item.currency == currency.value">
+      <mat-card appearance="outlined" *ngIf="item.currency == currency.value">
         <img mat-card-image src={{item.image}}>
         <mat-card-header>
           <mat-card-title>{{item.name}}</mat-card-title>
@@ -31,7 +31,7 @@
 <div *ngIf="stripeRole">
   <h2>Status</h2>
   <ng-container *ngFor="let item of subscriptions">
-    <mat-card>
+    <mat-card appearance="outlined">
       <mat-card-header>
         <mat-icon mat-card-avatar>{{item.active === true ? 'check_circle' : 'highlight_off'}}</mat-icon>
         <mat-card-title>{{item.name}}</mat-card-title>      

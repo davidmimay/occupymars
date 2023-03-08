@@ -25,13 +25,13 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDialogModule } from '@angular/material/dialog';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 // Maybe unused
 /*
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { HttpClientModule } from '@angular/common/http';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 */
@@ -76,13 +76,13 @@ const modules = [
   MatPaginatorModule,
   MatDialogModule,
   YouTubePlayerModule,
+  MatTooltipModule,
   // Maybe unused
   /*
   MatProgressSpinnerModule,
   MatAutocompleteModule,
   DragDropModule,
   HttpClientModule,
-  MatTooltipModule,
   */
 ];
 
