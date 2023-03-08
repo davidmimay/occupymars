@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angulartemplate": {
+    "occupymars": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angulartemplate/browser",
+            "outputPath": "dist/occupymars/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angulartemplate:build:production"
+              "browserTarget": "occupymars:build:production"
             },
             "development": {
-              "browserTarget": "angulartemplate:build:development"
+              "browserTarget": "occupymars:build:development"
             }
           },
           "defaultConfiguration": "development",
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angulartemplate:build"
+            "browserTarget": "occupymars:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/angulartemplate/server",
+            "outputPath": "dist/occupymars/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "inlineStyleLanguage": "scss"
@@ -128,12 +128,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "angulartemplate:build:development",
-              "serverTarget": "angulartemplate:server:development"
+              "browserTarget": "occupymars:build:development",
+              "serverTarget": "occupymars:server:development"
             },
             "production": {
-              "browserTarget": "angulartemplate:build:production",
-              "serverTarget": "angulartemplate:server:production"
+              "browserTarget": "occupymars:build:production",
+              "serverTarget": "occupymars:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -147,12 +147,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "angulartemplate:build:production",
-              "serverTarget": "angulartemplate:server:production"
+              "browserTarget": "occupymars:build:production",
+              "serverTarget": "occupymars:server:production"
             },
             "development": {
-              "browserTarget": "angulartemplate:build:development",
-              "serverTarget": "angulartemplate:server:development"
+              "browserTarget": "occupymars:build:development",
+              "serverTarget": "occupymars:server:development"
             }
           },
           "defaultConfiguration": "production"
@@ -164,19 +164,19 @@
             "prerender": true,
             "firebaseProject": "mimay1",
             "firebaseHostingSite": "mimay1",
-            "functionName": "ssr_angulartemplate",
+            "functionName": "ssr_occupymars",
             "functionsNodeVersion": "16",
             "region": "us-central1",
-            "browserTarget": "angulartemplate:build:production",
-            "serverTarget": "angulartemplate:server:production",
-            "prerenderTarget": "angulartemplate:prerender:production",
-            "outputPath": "dist/angulartemplate/functions"
+            "browserTarget": "occupymars:build:production",
+            "serverTarget": "occupymars:server:production",
+            "prerenderTarget": "occupymars:prerender:production",
+            "outputPath": "dist/occupymars/functions"
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": "b378cd43-055e-4b78-b742-4cd1068d35e6"
+    "analytics": false
   }
 }

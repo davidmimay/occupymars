@@ -3,7 +3,7 @@
 <mat-dialog-content maxWidth="300px" class="mat-typography">
   <h3>{{ data.description}}</h3>
 
-  <mat-card *ngIf="data.photo?.length > 0">
+  <mat-card appearance="outlined" *ngIf="data.photo?.length > 0">
     <img mat-card-image [src]="data.photo[pageIndex]">
     <mat-paginator (page)="handlePageEvent($event)" [length]="data.photo.length" [pageSize]="1" hidePageSize="true"></mat-paginator>
   </mat-card>

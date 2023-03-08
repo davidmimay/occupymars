@@ -23,29 +23,27 @@
         <div matListItemTitle>👾 eth>to_mars</div>
         <div matListItemLine>Blockchain</div>
       </a>
-      <a mat-list-item routerLink="/ethtomars" (click)="drawer.close()">
+      <a mat-list-item routerLink="/caelux" (click)="drawer.close()">
         <div matListItemTitle>🔋 caelux</div>
         <div matListItemLine>Clean energy</div>
       </a>
-      <a mat-list-item routerLink="/ethtomars" (click)="drawer.close()">
+      <a mat-list-item routerLink="/lamboxproject" (click)="drawer.close()">
         <div matListItemTitle>🚙 lamboXPROJECT</div>
         <div matListItemLine>Electric cars</div>
       </a>
-      <a mat-list-item routerLink="/ethtomars" (click)="drawer.close()">
+      <a mat-list-item routerLink="/nentei" (click)="drawer.close()">
         <div matListItemTitle>😌 nentei</div>
         <div matListItemLine>Mindfulness</div>
       </a>
-      <a mat-list-item routerLink="/ethtomars" (click)="drawer.close()">
+      <a mat-list-item routerLink="/malamakai" (click)="drawer.close()">
         <div matListItemTitle>🌱 malamakai</div>
         <div matListItemLine>Hydroponics</div>
       </a>
-      <a mat-list-item routerLink="/ethtomars" (click)="drawer.close()">
+      <a mat-list-item routerLink="/xtorie" (click)="drawer.close()">
         <div matListItemTitle>🏠 xtorie</div>
         <div matListItemLine>Modular homes</div>
       </a>
-
       <!-- <a mat-list-item href="#app-action">Join</a> -->
-
       <ng-container *ngFor="let page of pages">
         <a mat-list-item routerLink="blog/page/{{page.id}}" (click)="drawer.close()">{{page.title}}</a>
       </ng-container>
@@ -68,6 +66,16 @@
         <ng-container *ngFor="let page of pages">
           <a mat-button routerLink="blog/page/{{page.id}}">{{page.title}}</a>
         </ng-container>
+        
+        <button mat-button [matMenuTriggerFor]="apps">Apps</button>
+        <mat-menu #apps="matMenu">
+          <button mat-menu-item routerLink="/ethtomars">👾 eth>to_mars</button>
+          <button mat-menu-item routerLink="/caelux">🔋 caelux</button>
+          <button mat-menu-item routerLink="/malamakai">🌱 malamakai</button>
+          <button mat-menu-item routerLink="/xPROJECT">🚙 lamboXPROJECT</button>
+          <button mat-menu-item rrouterLink="/nentei">😌 nentei</button>
+          <button mat-menu-item routerLink="/xtorie">🏠 xtorie</button>
+        </mat-menu>
 
         <!-- <a mat-button routerLink="/youtube">Youtube</a> -->
         <!-- <a mat-button routerLink="/gifts">gifts</a> -->
@@ -88,7 +96,7 @@
         <a mat-menu-item href="https://github.com/davidmimay/{{app}}" target="_blank">
           <mat-icon>code</mat-icon><span>Code on Github</span>
         </a>
-        <a mat-menu-item href="https://climate.stripe.com/W6nkrx" target="_blank">
+        <a mat-menu-item href="https://climate.stripe.com/2WLs3j" target="_blank">
           <mat-icon>eco</mat-icon><span>Carbon Removal</span>
         </a>
         <a mat-menu-item href="https://youtube.com/channel/UCjoXaFxfiYpVQo8BGj_Glsg" target="_blank">

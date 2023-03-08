@@ -1,0 +1,43 @@
+<div class="ocean">
+  <div class="grid">
+    <ng-container *ngIf="invoices.length == 0">
+      <h2 class="upgrade">upgrade to help sea animals grow here...</h2>
+    </ng-container>
+
+    <div *ngFor="let item of invoices; let i = index">
+      <button class="animal" mat-button [matMenuTriggerFor]="menu" matTooltip="{{item.description}}">
+        
+        <div class="water">
+          <div class="water-main">
+            <div class="main-water">
+              <!-- <h1 class="shake">{{item.label}}</h1> -->
+            </div>
+            <div class="particle-water"></div>
+            <div class="particle-water2"></div>
+          </div>
+        </div>
+
+      </button>
+      <mat-menu #menu="matMenu">
+        <mat-list>
+          <img src="assets/beach.jpg">
+          <mat-list-item>
+            <p mat-line>Clean: #{{item.number}}</p>
+            <!-- <p mat-line>Quantity: {{item.help}}kg of CO2 removed</p> -->
+            <p mat-line>When: {{item.created | date}}</p>
+          </mat-list-item>
+          <a mat-menu-item href="https://goo.gl/maps/eHW7QLyPC2JCZzJP7" target="_blank">Where: 📍 Portman (see map)</a>
+        </mat-list>
+      </mat-menu>
+    </div>  
+  </div>
+</div>
+
+<div class="action">
+  <div class="middle">
+    <button mat-stroked-button class="text" routerLink="/user">🌴 join</button>
+    <div class="island"></div>
+    <div class="wave"></div>
+    <div class="wave2"></div>
+  </div>
+</div>

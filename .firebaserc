@@ -2,13 +2,13 @@
   "targets": {
     "mimay1": {
       "hosting": {
-        "angulartemplate": [
-          "nooglerway"
+        "occupymars": [
+          "occupymars"
         ]
       }
     }
   },
   "projects": {
-    "default": "nooglerway"
+    "default": "occupymars"
   }
 }

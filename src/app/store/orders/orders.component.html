@@ -1,6 +1,6 @@
 <h1>Order history</h1>
 <ng-container *ngFor="let order of payments">
-  <mat-card>
+  <mat-card appearance="outlined">
     <mat-card-header>
       <mat-card-title>Order placed | {{order.created | date}}</mat-card-title>
       <mat-card-subtitle>Total: {{order.amount}} {{order.currency}}</mat-card-subtitle>
@@ -11,7 +11,7 @@
         <mat-list>
           <div mat-subheader>Order details:</div>
           <mat-list-item *ngFor="let product of order.items">
-            <mat-icon matListItemIcon><mat-chip>{{product.quantity}}</mat-chip></mat-icon>
+            <mat-icon matListItemIcon><mat-chip-option>{{product.quantity}}</mat-chip-option></mat-icon>
             <div matListItemTitle>{{product.description}}</div>
             <div matListItemLine>{{product.amount_total}} {{product.currency}}</div>
           </mat-list-item>

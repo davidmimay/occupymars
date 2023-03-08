@@ -1,8 +1,8 @@
 {
   "hosting": [
     {
-      "target": "angulartemplate",
-      "public": "dist/angulartemplate/browser",
+      "target": "occupymars",
+      "public": "dist/occupymars/browser",
       "ignore": [
         "**/.*"
       ],
@@ -29,12 +29,12 @@
       "rewrites": [
         {
           "source": "**",
-          "function": "ssr_angulartemplate"
+          "function": "ssr_occupymars"
         }
       ]
     }
   ],
   "functions": {
-    "source": "dist/angulartemplate/functions"
+    "source": "dist/occupymars/functions"
   }
 }
