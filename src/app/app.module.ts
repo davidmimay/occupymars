@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MalamakaiModule } from './malamakai/malamakai.module';
 
 // AngularFire Modular
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -55,6 +55,7 @@ import { YoutubeModule } from './youtube/youtube.module';
     StoreModule,
     HomeModule,
     YoutubeModule,
+    MalamakaiModule
   ],
   providers: [
     ScreenTrackingService,
