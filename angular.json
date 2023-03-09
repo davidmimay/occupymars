@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "occupymars": {
+    "webapp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/occupymars/browser",
+            "outputPath": "dist/webapp/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "occupymars:build:production"
+              "browserTarget": "webapp:build:production"
             },
             "development": {
-              "browserTarget": "occupymars:build:development"
+              "browserTarget": "webapp:build:development"
             }
           },
           "defaultConfiguration": "development",
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "occupymars:build"
+            "browserTarget": "webapp:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/occupymars/server",
+            "outputPath": "dist/webapp/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "inlineStyleLanguage": "scss"
@@ -128,12 +128,12 @@
           "builder": "@nguniversal/builders:ssr-dev-server",
           "configurations": {
             "development": {
-              "browserTarget": "occupymars:build:development",
-              "serverTarget": "occupymars:server:development"
+              "browserTarget": "webapp:build:development",
+              "serverTarget": "webapp:server:development"
             },
             "production": {
-              "browserTarget": "occupymars:build:production",
-              "serverTarget": "occupymars:server:production"
+              "browserTarget": "webapp:build:production",
+              "serverTarget": "webapp:server:production"
             }
           },
           "defaultConfiguration": "development"
@@ -147,12 +147,12 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "occupymars:build:production",
-              "serverTarget": "occupymars:server:production"
+              "browserTarget": "webapp:build:production",
+              "serverTarget": "webapp:server:production"
             },
             "development": {
-              "browserTarget": "occupymars:build:development",
-              "serverTarget": "occupymars:server:development"
+              "browserTarget": "webapp:build:development",
+              "serverTarget": "webapp:server:development"
             }
           },
           "defaultConfiguration": "production"
@@ -164,13 +164,13 @@
             "prerender": true,
             "firebaseProject": "mimay1",
             "firebaseHostingSite": "mimay1",
-            "functionName": "ssr_occupymars",
+            "functionName": "ssr_webapp",
             "functionsNodeVersion": "16",
             "region": "us-central1",
-            "browserTarget": "occupymars:build:production",
-            "serverTarget": "occupymars:server:production",
-            "prerenderTarget": "occupymars:prerender:production",
-            "outputPath": "dist/occupymars/functions"
+            "browserTarget": "webapp:build:production",
+            "serverTarget": "webapp:server:production",
+            "prerenderTarget": "webapp:prerender:production",
+            "outputPath": "dist/webapp/functions"
           }
         }
       }

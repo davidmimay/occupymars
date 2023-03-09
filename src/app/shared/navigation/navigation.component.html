@@ -36,12 +36,16 @@
         <div matListItemLine>Mindfulness</div>
       </a>
       <a mat-list-item routerLink="/malamakai" (click)="drawer.close()">
-        <div matListItemTitle>🌱 malamakai</div>
-        <div matListItemLine>Hydroponics</div>
+        <div matListItemTitle>🌊 malamakai</div>
+        <div matListItemLine>Remove CO2</div>
       </a>
       <a mat-list-item routerLink="/xtorie" (click)="drawer.close()">
         <div matListItemTitle>🏠 xtorie</div>
         <div matListItemLine>Modular homes</div>
+      </a>
+      <a mat-list-item routerLink="/hydroflorum" (click)="drawer.close()">
+        <div matListItemTitle>🌱 hydroflorum</div>
+        <div matListItemLine>Hydroponics</div>
       </a>
       <!-- <a mat-list-item href="#app-action">Join</a> -->
       <ng-container *ngFor="let page of pages">
@@ -71,12 +75,12 @@
         <mat-menu #apps="matMenu">
           <button mat-menu-item routerLink="/ethtomars">👾 eth>to_mars</button>
           <button mat-menu-item routerLink="/caelux">🔋 caelux</button>
-          <button mat-menu-item routerLink="/malamakai">🌱 malamakai</button>
+          <button mat-menu-item routerLink="/malamakai">🌊 malamakai</button>
           <button mat-menu-item routerLink="/xPROJECT">🚙 lamboXPROJECT</button>
           <button mat-menu-item rrouterLink="/nentei">😌 nentei</button>
           <button mat-menu-item routerLink="/xtorie">🏠 xtorie</button>
+          <button mat-menu-item routerLink="/hydroflorum">🌱 hydroflorum</button>
         </mat-menu>
-
         <!-- <a mat-button routerLink="/youtube">Youtube</a> -->
         <!-- <a mat-button routerLink="/gifts">gifts</a> -->
         <!-- <a mat-button href="https://malamakai.etsy.com/" target="_blank">✨ Shop</a> -->

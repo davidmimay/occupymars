@@ -11,6 +11,8 @@ const routes: Routes = [
   { path: 'youtube', loadChildren: () => import('./youtube/youtube.module').then(m => m.YoutubeModule) },
   // Apps
   { path: 'malamakai', loadChildren: () => import('./malamakai/malamakai.module').then(m => m.MalamakaiModule) },
+  { path: 'ethtomars', loadChildren: () => import('./ethtomars/ethtomars.module').then(m => m.EthtomarsModule) },
+  { path: 'hydroflorum', loadChildren: () => import('./hydroflorum/hydroflorum.module').then(m => m.HydroflorumModule) },
   // Stripe
   { path: 'support', component: PaymentComponent },
   { path: 'privacy', component: PaymentComponent },

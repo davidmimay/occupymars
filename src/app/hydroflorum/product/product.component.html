@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>{{data.name}}</h2>
+
+<mat-dialog-content maxWidth="300px" class="mat-typography">
+  <h3>{{ data.description}}</h3>
+
+  <mat-card appearance="outlined" *ngIf="data.photo?.length > 0">
+    <img mat-card-image [src]="data.photo[pageIndex]">
+    <mat-paginator (page)="handlePageEvent($event)" [length]="data.photo.length" [pageSize]="1" hidePageSize="true"></mat-paginator>
+  </mat-card>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Buy</button>
+</mat-dialog-actions>
