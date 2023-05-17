@@ -15,7 +15,7 @@ export class SigninDirective {
     // ℹ️ https://firebase.google.com/docs/auth/web/google-signin#web-version-9_4
     const provider = new GoogleAuthProvider()
     // Ask user for google data access
-    provider.addScope('https://www.googleapis.com/auth/youtube.readonly')
+    // provider.addScope('https://www.googleapis.com/auth/youtube.readonly')
     // provider.addScope('https://www.googleapis.com/auth/calendar');
     return signInWithRedirect(this.auth, provider)
     // update user data
